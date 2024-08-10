@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "VisualizerPluginCanvas.h"
 
-#include "VisualizerPlugin.h"
+#include "RateViewer.h"
 
 
 VisualizerPluginCanvas::VisualizerPluginCanvas(VisualizerPlugin* processor_)

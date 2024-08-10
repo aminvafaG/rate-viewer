@@ -33,14 +33,14 @@
 	or an extended settings interface.
 */
 
-class VisualizerPlugin : public GenericProcessor
+class RateViewer : public GenericProcessor
 {
 public:
 	/** The class constructor, used to initialize any members.*/
-	VisualizerPlugin();
+	RateViewer();
 
 	/** The class destructor, used to deallocate memory*/
-	~VisualizerPlugin();
+	~RateViewer();
 
 	/** If the processor has a custom editor, this method must be defined to instantiate it. */
 	AudioProcessorEditor* createEditor() override;
@@ -81,7 +81,7 @@ public:
 private:
 
 	/** Generates an assertion if this class leaks */
-	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(VisualizerPlugin);
+	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(RateViewer);
 
 };
 

@@ -21,39 +21,39 @@
 
 */
 
-#include "VisualizerPlugin.h"
+#include "RateViewer.h"
 
 #include "VisualizerPluginEditor.h"
 
 
-VisualizerPlugin::VisualizerPlugin() 
-    : GenericProcessor("Visualizer Plugin")
+RateViewer::RateViewer()
+    : GenericProcessor("Rate Viewer")
 {
 
 }
 
 
-VisualizerPlugin::~VisualizerPlugin()
+RateViewer::~RateViewer()
 {
 
 }
 
 
-AudioProcessorEditor* VisualizerPlugin::createEditor()
+AudioProcessorEditor* RateViewer::createEditor()
 {
     editor = std::make_unique<VisualizerPluginEditor>(this);
     return editor.get();
 }
 
 
-void VisualizerPlugin::updateSettings()
+void RateViewer::updateSettings()
 {
 
 
 }
 
 
-void VisualizerPlugin::process(AudioBuffer<float>& buffer)
+void RateViewer::process(AudioBuffer<float>& buffer)
 {
 
     checkForEvents(true);
@@ -61,31 +61,31 @@ void VisualizerPlugin::process(AudioBuffer<float>& buffer)
 }
 
 
-void VisualizerPlugin::handleTTLEvent(TTLEventPtr event)
+void RateViewer::handleTTLEvent(TTLEventPtr event)
 {
 
 }
 
 
-void VisualizerPlugin::handleSpike(SpikePtr spike)
+void RateViewer::handleSpike(SpikePtr spike)
 {
 
 }
 
 
-void VisualizerPlugin::handleBroadcastMessage(String message)
+void RateViewer::handleBroadcastMessage(String message)
 {
 
 }
 
 
-void VisualizerPlugin::saveCustomParametersToXml(XmlElement* parentElement)
+void RateViewer::saveCustomParametersToXml(XmlElement* parentElement)
 {
 
 }
 
 
-void VisualizerPlugin::loadCustomParametersFromXml(XmlElement* parentElement)
+void RateViewer::loadCustomParametersFromXml(XmlElement* parentElement)
 {
 
 }
